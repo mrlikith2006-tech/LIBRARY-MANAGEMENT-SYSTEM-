@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">L</div>
+          <div>
+            <p class="eyebrow">Library</p>
+            <h1>Management System</h1>
+          </div>
+        </div>
+        <nav class="nav-list" aria-label="Primary">
+          <button class="nav-button active" data-view="dashboard" type="button">Dashboard</button>
+          <button class="nav-button" data-view="issues" type="button">Issues</button>
+          <button class="nav-button" data-view="books" type="button">Books</button>
+          <button class="nav-button" data-view="members" type="button">Members</button>
+          <button class="nav-button" data-view="librarians" type="button">Librarians</button>
+          <button class="nav-button" data-view="schema" type="button">Schema</button>
+        </nav>
+        <div class="schema-note">
+          <span>PK</span> primary key
+          <span>FK</span> foreign key
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="section-kicker">Schema-backed operations</p>
+            <h2 id="section-title">Dashboard</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button" id="refresh-button" type="button" title="Refresh data" aria-label="Refresh data">
+              <span aria-hidden="true">R</span>
+            </button>
+          </div>
+        </header>
+        <div id="alert-region" class="alert-region" aria-live="polite"></div>
+        <section id="content" class="content-area" aria-label="Application content">
+          <div class="loading">Loading library records...</div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+

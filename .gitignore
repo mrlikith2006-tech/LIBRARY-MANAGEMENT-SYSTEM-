@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+data/
+*.db
+*.sqlite3
+.tmp-tests/
+.tmp-pip/
+
+node_modules/
+dist/
+*.log
+college-dating-app/tools/
+college-dating-app/data/
