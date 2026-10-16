@@ -70,3 +70,16 @@ data/library_management/library.db
 ```powershell
 python -m unittest tests.test_library_management
 ```
+
+## Jenkins CI/CD
+
+The root `Jenkinsfile` runs the unit tests on each build and archives the
+application files as a fingerprinted build artifact. To configure Jenkins,
+create a Pipeline job for this repository and use **Pipeline script from SCM**
+with `Jenkinsfile` as the script path. The Jenkins agent needs Python 3; the app
+uses only the Python standard library.
+
+The archived artifact is ready to run with the launcher scripts or with
+`python library_app.py --host 127.0.0.1 --port 8010`. No remote deployment
+target is configured; deploy the artifact from Jenkins only after configuring
+the intended target and credentials.
